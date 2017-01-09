@@ -1,3 +1,9 @@
-## Welcome
+# Slide 1
 
-Welcome to the jekyll-reveal.js example presentation.
+This is the content of Slide 1
+
+---
+
+# Slide 2
+
+This is the content of Slide 2
