@@ -6,8 +6,8 @@ This could be usefull if you had read Code Complete by Steve.
 
 ### Steve's Point of View ###
 1. Source Code is the only long lasting accurate description of software
-2. Software construction is the only activity thats gauranteed to be done
-3. Great Softwares are cerated thorugh the thoursands of tiny decisions,desgin,comments and so on.
+2. Software construction is the only activity thats guaranteed to be done
+3. Great Softwares are cerated thorugh the thousands of tiny decisions,desgin,comments and so on.
 4. Construct the software well the first time , you wont get a chance to do it again.
 5. Leave the code more pristine than it was.
 
