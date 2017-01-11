@@ -1,147 +1,20 @@
-# jekyll-reveal.js
+A Jekyll-based framework for creating presentations based on Reveal.js and markdown. 
+Forked from http://dploeger.github.io/jekyll-revealjs/ 
 
-A Jekyll-based framework for creating presentations based on Reveal.js and markdown.
+### Vision
 
-## Introduction
+**Experience is making mistakes and learning from them.**
 
-If you like [Reveal.js][] for creating your online presentations, like the site
-management [Jekyll][] gives you and like [Markdown][] because of its easy and clean look, 
-here's an easy way to create a presentation using Jekyll, Markdown and Reveal.js.
+Every one will agree to it, also the other most important aspect of experience is learing from others experience. 
+There are lots of resources available out there , books written by experts who have more than 20 years of experience , say code complete by Steve , Refactoring by Kent Beck and Martin Fowler , youtube videos from university professors and many more that a Software Developer should never miss. 
 
-See the [example presentation][] created using the contents in this repository and "jekyll build".
+I am trying to aggregate , add notes and references to those resources in this repositroy , so everyone can benefit from it.
+Feel free to use https://1deepan1.github.io/mem for sharing / learning .
 
-## Howto
+If anyone wants to remove the contents - which should'nt be in here - please write a mail to me.
 
-First, [install Jekyll][]. After that, clone this repository and create a branch
-for your new presentation:
+Feel free to contribute your learnings.
 
-    git clone --recursive https://github.com/dploeger/jekyll-revealjs.git
-    git checkout -b presentation1
-
-Clean the Example presentation:
-
-    git rm _posts/*
-    mkdir _posts
-
-After that, add your slides into the _posts-subdirectory in clean Markdown syntax
-and you're ready to go with building your presentation with Jekyll:
-
-    jekyll build
-
-You can even manage multiple presentations using the power of git. Simply branch from the
-master branch to create a new presentation:
-
-    git checkout master
-    git branch presentation2
-    git checkout presentation2
-
-## Slide filenames
-
-Because we're using the Jekyll posts-framework to easily gather the slides for the presentation, 
-we're bound to the conventions of Jekyll posts, namely being
-
-    <year>-<month>-<day>-<title>.md
-
-We recommend naming the files like
-
-    1-1-1-1-welcome.md
-    1-1-1-2-topics.md
-
-and so forth. 
-
-Jekyll will assume, that each post has been made on the first of january, 2001 (which is of no interest
-for a presentation). The additional number is for sorting purposes. After that comes a title to identify 
-the specific slide (which is actually only for the presentation author, Jekyll doesn't care about it).
-
-## Configuring the presentation
-
-You can configure almost any reveal.js setting using the _config.yml-settings file in the
-root directory.
-
-* title: The title of your presentation (displayed in the browser's title bar)
-* reveal_theme: The reveal.js-theme to use [default.css]
-* reveal_transition: The reveal.js-transition to use [default]
-* reveal_theme_path: The path to the reveal.js-theme (can be changed for custom themes) [reveal.js/css/theme/]
-* reveal_notes_server: Wether to support the speaker notes server [false (only local speaker notes)]
-* reveal_options: Additional reveal.js [options][]
-* reveal_dependencies: Additional reveal.js [dependencies][]
-* reveal_path: Path to the reveal.js-installation [reveal.js]
-
-## Custom reveal.js-themes
-
-If you want to use your custom reveal.js-theme, we recommend adding a directory "theme", putting the file(s)
-there and referencing that directory in the configuration "reveal_theme_path".
-
-Don't mess with the reveal.js subdirectory as it is a subrepository and doesn't adhere to your repository's
-branches.
-
-## Markdown extensions and simplification
-
-Reveal.js already includes a markdown interpreter, which we use for jekyll-reveal.js. We have already
-configured it and included some simplification just for you!
-
-### Multiple slides
-
-To use multiple slides in one slide file, use a newline, three dashes and another newline like this:
-
-    # Slide 1
-    
-    This is the content of Slide 1
-    
-    ---
-    
-    # Slide 2
-    
-    This is the content of Slide 2
-
-### Vertical slides
-
-To use vertical slides, do the same, but use two dashes:
-
-    # Slide 1
-    
-    This is the content of Slide 1
-    
-    --
-    
-    And this is a vertical slide below Slide 1
-
-### Fragments
-
-Fragments allow slide elements to come one by one. This is often used in lists to subsequently show
-fragments of a list during a presentation.
-
-To use fragments, jekyll-reveal.js includes a jekyll-plugin, that simplifies the use of fragments
-in markdown. To specify the current element as a fragment, use the {% fragment %}-tag like this:
-
-    # Slide
-    
-    * This {% fragment %}
-    * will {% fragment %}
-    * come one by one {% fragment %}
-
-### Slide backgrounds
-
-To modify the background of the current slide, jekyll-reveal.js also includes a simplification
-plugin:
-
-    # Slide
-    
-    {% background white %}
-    
-    This slide has a white background
-
-### Speaker notes
-
-jekyll-reveal.js is configured, so that speaker notes are identified after an introductory "Note:"-tag:
-
-    # Slide
-
-    Some slide content
-
-    Note:
-
-    This is only displayed in the speaker notes.
 
 [Reveal.js]:      http://lab.hakim.se/reveal-js/#/
 [Jekyll]:         http://jekyllrb.com/
