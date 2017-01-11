@@ -14,7 +14,7 @@ This could be usefull if you had read Code Complete by Steve.
 ---
 
 ###Complexity 
-1. Main reason for project failure is requiremts 
+1. Main reason for project failure is arround the requirement gathering 
 2. Second reason is poor project planning
 3. Third reason - code quality
 
