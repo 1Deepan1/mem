@@ -1,4 +1,4 @@
-## Notes From Code Complete ##
+## Code Complete Notes ##
 
 - This could be usefull if you had read Code Complete 
 or taken up the on demand e-learning from construx.com by Steve.

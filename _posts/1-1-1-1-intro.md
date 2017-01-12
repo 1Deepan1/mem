@@ -6,9 +6,8 @@
 
 ---
 
-##Vision
+###Vision
 
 - I am trying to aggregate, add notes and references to those resources in this repository , so everyone can benefit from it. More importantly, I dont want to forget what I read.
 - Source code is in https://github.com/1Deepan1/mem , please contribute your learnings too.
 Adding slides is so easy , check _posts directory 
-- Yet to add table of contents.
