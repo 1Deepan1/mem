@@ -1,15 +1,35 @@
 ## Notes From Code Complete ##
 
-This could be usefull if you had read Code Complete by Steve.
+- This could be usefull if you had read Code Complete 
+or taken up the on demand e-learning from construx.com by Steve.
+
+- In few of the slides, added my learnings as well, 
+which can be identifed by the tag [MDK]
 
 ---
 
 ### Steve's Point of View ###
 1. Source Code is the only long lasting accurate description of software
 2. Software construction is the only activity thats guaranteed to be done
-3. Great Softwares are cerated thorugh the thousands of tiny decisions,desgin,comments and so on.
+3. Great Softwares are created thorugh the thousands of tiny decisions,desgin,comments and so on.
 4. Construct the software well the first time , you wont get a chance to do it again.
 5. Leave the code more pristine than it was.
+
+---
+
+###Essential Properties
+
+- The properties a thing has by virtue of being that thing.
+
+car --> engine , wheels
+
+---
+
+###Accidental Properties
+
+The properties a thing just happens to have.
+
+car --> color , engine type
 
 ---
 
@@ -41,8 +61,90 @@ This could be usefull if you had read Code Complete by Steve.
 
 ---
 
+###Abstraction
+
+- Allows you to look at a complex information in a simplest way.
+
+---
+
+###Encapsulation
+
+- Hiding the implementation details - the complex information , 
+in modern programming languages there is no more encapsulation.
+- [MDK]
+The other way would be encapsulate the details which may vary.
+
+[MDK]Example :
+
+	List<String> stooges = Arrays.asList("Larry", "Moe", "Curly");
+- Here client is not aware of the concrete implemetation 
+that the above operation is going to return. 
+So it makes easier for further enhancements or changes, 
+client will not be affected.There is much more to it, hope you get the point.
+
+---
+
+### Avoid Global Data
+
+- The title is more sufficient to understand , this is related to encapsulation.
+- Dont provide global access to the members of the class. Basically it boils down to getters and setters,
+ Steve calls it as access routines. 
+
+---
+
 ###Code Level Optimisation
 
+>The best is the enemy of the good
+
+- Working toward perfection might prevent completion. Complete it first and then perfect it.
+The part that needs to be perfect is usually small.(80/20 rule)
+
+>We should forget about small efficiencies, say about 97% of the time : 
+premature optimisation is the root of all evil --Donald Knuth
+
+---
+
+### It is not about
+
+- Algorithim selection
+- Design for performance.
+
+---
+
+### Reasons to be defensive about code level optimization
+
+- Root cause for complexity and code quality
+- Results in accidental complexity
+
+---
+
+### Defensive Approach
+
+- Step 1: Don't worrry about optimization , always write a emphazising , readable , simple and maintainable code
+
+- Step 2: Measure the performance, if performance is not satisfactory
+
+- Step 3: Find the performance hotspots.
+
+- Step 4: Perform transformations one at a time.
+
+- Step 5: Measure each transformations and rollback the changes that dont work
+
+- Step 6: Repeat untill done.
+
+---
+
+### Steve's Rule for Code optimization
+
+>If you haven't measured , you dont know
+
+Invalid Exceptions(Don't Believe)
+
+- Everybody know that this approach is faster than that.
+- I read in that book , that this approach is faster than that.
+- I applied this optimization on my last project. 
+
+### Error Processing 
 
 to be added
 
