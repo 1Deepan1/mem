@@ -11,7 +11,7 @@ which can be identifed by the tag [MDK]
 ### Steve's Point of View ###
 1. Source Code is the only long lasting accurate description of software
 2. Software construction is the only activity thats guaranteed to be done
-3. Great Softwares are created thorugh the thousands of tiny decisions,desgin,comments and so on.
+3. Great Softwares are created through the thousands of tiny decisions,design,comments and so on.
 4. Construct the software well the first time , you wont get a chance to do it again.
 5. Leave the code more pristine than it was.
 
@@ -120,7 +120,7 @@ premature optimisation is the root of all evil --Donald Knuth
 
 ### Defensive Approach
 
-- Step 1: Don't worrry about optimization , always write a emphazising , readable , simple and maintainable code
+- Step 1: Don't worrry about optimization , always write a emphasising , readable , simple and maintainable code
 
 - Step 2: Measure the performance, if performance is not satisfactory
 
