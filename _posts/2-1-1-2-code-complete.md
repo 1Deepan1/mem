@@ -144,6 +144,8 @@ Invalid Exceptions(Don't Believe)
 - I read in that book , that this approach is faster than that.
 - I applied this optimization on my last project. 
 
+---
+
 ### Error Processing 
 
 to be added
