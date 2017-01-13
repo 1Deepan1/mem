@@ -1,5 +1,8 @@
 A Jekyll-based framework for creating presentations based on Reveal.js and markdown. 
-Forked from http://dploeger.github.io/jekyll-revealjs/ 
+Forked from 
+[jekyll-revealjs](http://dploeger.github.io/jekyll-revealjs/) 
+
+For Table of contents , I am using [Presentable](https://github.com/frederickf/presentable)
 
 ### Vision
 
