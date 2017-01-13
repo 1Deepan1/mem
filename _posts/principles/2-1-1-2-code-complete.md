@@ -33,6 +33,22 @@ car --> color , engine type
 
 ---
 
+#### Technology Knowledge
+
+1. Short lived
+2. Readily accquired
+3. Accidental
+
+---
+
+#### Principles Knowledge
+
+1. Essential
+2. Long lived
+3. Not so readily accquired
+
+---
+
 ###Complexity 
 1. Main reason for project failure is arround the requirement gathering 
 2. Second reason is poor project planning
@@ -148,6 +164,75 @@ Invalid Exceptions(Don't Believe)
 
 ### Error Processing 
 
-to be added
+---
+
+### Times When Error Processing Required
+
+- input values are out of range
+- input values are of wrong type of data
+- input values that are incomplete
+- input values that are unusual
+- input values that aren't defined
+
+---
+
+### Error Processing Decisions
+
+- What does your program do with bad input values
+- Do you need to handle every error or just common errors
+- Which part of the program is responsible
+- Should all error be treaded same way
+- Should all parts of the program handle errors the same way
+- Are these coding or design or architecture decisions
+
+---
+
+### Correctness Vs Robustness
+
+- Correctness means 100% accurate, else will not return result
+- Robustness means always return the result, even if it is not accurate
+
+---
+
+### Importance of Error Processing
+
+- It should be a architecture decision
+- 25 - 75 % of code is related to error handling
+
+---
+
+### Error handling Techniques 
+
+- Return a neutral value 
+- Substitue the next piece of valid data
+- Return the same answer as the previous time
+- substitue the closest legal value
+- log warning message to a file
+- Return an error code 
+- Shutdown
+
+---
+
+### Exceptions
+
+- Use Exceptions to notify other parts of the program about errors that should not be ignored
+- Throw an exception only for condtions that are truly exceptional
+- Dont throw an uncaught exception in a section of code if you can handle the error locally
+- Throw exceptions at the right level of abstractions
+- Consider creating your own project specific exception class , which can serve as the base class for all exceptions
+  thrown on your project.
+- Consider alternatives to exceptions
+- Define a standardized approach to exception handling.
+
+---
+
+### Assertions
+
+- Way to document design assumptions
+- Rather than documenting in comments consider using assertions
+- If an assertion fails the corrective action is to recode
+- Development time aid , not for production
+
+
 
 
