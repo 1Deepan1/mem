@@ -228,10 +228,79 @@ Invalid Exceptions(Don't Believe)
 
 ### Assertions
 
-- Way to document design assumptions
+- Way to document design assumptions , an executable documentation
 - Rather than documenting in comments consider using assertions
 - If an assertion fails the corrective action is to recode
 - Development time aid , not for production
+- Do not use assertions to check the parameters of a public method
+- Use an assertion to test a nonpublic method's
+
+---
+
+### Need for Assertions
+- Large code base
+- complex programs
+- large team , geographically distributed
+- long lived code base
+- eg: from java docs.
+	
+		/**
+	 	* Sets the refresh interval (which must correspond to a legal frame rate).
+	 	*
+	 	* @param  interval refresh interval in milliseconds.
+	 	*/
+	 	private void setRefreshInterval(int interval) {
+	  	// Confirm adherence to precondition in nonpublic method
+	  	assert interval > 0 && interval <= 1000/MAX_REFRESH_RATE : interval;
+
+	  	... // Set the refresh interval
+	 	} 
+
+---
+
+### Minimize Gap between defect insertion and defect detection
+
+- Unit Test
+- Assertions
+- Formal code inspection
+- Pair Programming
+- Single Stepping through debugging
+
+---
+
+
+### Minimizing defects beyond coding
+
+- Requirement inspection
+- UI prototyping
+- Architecture inspections
+- Customer demos
+- Frequent releases
+- Self review
+
+### Pseudocode Programming process
+
+- [MDK] I had done this very fewer times before reading Code Compelte book , from now on I am going to follow it strictly.
+- Write each step of routing in English using comment syntax 
+- Reveiw the pseudocode
+- Fill in the code below each comment
+- Keep the pseudocode as comments
+
+### Need for Pseudocode 
+
+- Easier to write code
+- No blocks while coding , don't have to look back at the requirement doc.
+- Easier to review
+- Better organised code
+- Easier to resume in a multitasking environment
+- Fewer errors.
+- Last but not the least , comments are already in place.
+
+
+
+
+
+
 
 
 
