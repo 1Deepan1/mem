@@ -268,7 +268,6 @@ Invalid Exceptions(Don't Believe)
 
 ---
 
-
 ### Minimizing defects beyond coding
 
 - Requirement inspection
@@ -278,6 +277,8 @@ Invalid Exceptions(Don't Believe)
 - Frequent releases
 - Self review
 
+---
+
 ### Pseudocode Programming process
 
 - [MDK] I had done this very fewer times before reading Code Compelte book , from now on I am going to follow it strictly.
@@ -285,6 +286,8 @@ Invalid Exceptions(Don't Believe)
 - Reveiw the pseudocode
 - Fill in the code below each comment
 - Keep the pseudocode as comments
+
+---
 
 ### Need for Pseudocode 
 
