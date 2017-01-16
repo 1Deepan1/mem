@@ -22,7 +22,7 @@
 	2. update anomaly - update one item , but end up updating multiple places
 	3. Deletion anomaly - end up deleting multiple places
 
-	>Anomalies are addressed via functional dependency & nomalization
+	>Anomalies are addressed via functional dependency & normalization
 
 ---
 
@@ -61,6 +61,130 @@
 - color,category --> price (color and category determines price)
 
 ---
+
+### Closure of a set of Attributes
+Example:
+		
+		1.Name -> Color
+		2.Category -> Department
+		3.Color,Category -> Price
+
+Closures:
+		
+		1.name+ = {name, color}
+		2.{name, category}+ = {name, color,category,department,price}
+		3.color+ = {color}
+
+---
+
+### Keys
+
+- Which functionally determines all other attributes
+- Superkey is a set of attributes A1...An such that for any other attribute B, We have A1,...An -> B
+- Key is a minimal superkey 
+- A superkey for which no subset is a superkey
+
+---
+
+### Normalization
+
+---
+
+### BCNF
+
+```
+A relation R is in BCNF , whenever X -> B 
+It is non trivial dependency
+then X is a super key.```
+
+Equivalently
+
+```
+In any set of attributes , if u compute closures, 
+either you get same set of attributes or
+you get all the attributes.
+
+X+ = X 
+X is a super key 
+Trivial dependency
+	or 
+X+= [All the attributes] 
+X is a super key 
+Non Trivial dependency
+```
+
+---
+
+### BCNF ALGORITHIM
+
+1. Find X such that (X != X+) and (X != [All attributes])
+2. If not found then R is in BCNF
+3. Else
+4. Let Y = (X+) + X  and Z = [All Attributes] - (X+)
+5. Decompose R into R1( X U Y ) and R2 (X U Z)
+6. Normalize(R1) ; Normalize (R2 )
+
+<img data-src="lib/bcnf.png">
+
+---
+
+<small>
+
+|Name|SSN 	   	 |PhoneNumber|City   |
+|----|-----------|-----------|-------|
+|Fred|123-34-3458|123456781  |Seattle|
+|Fred|123-34-3458|223456782  |Seattle|
+|Jose|223-34-3458|323456783  |WestFie|
+|Jose|223-34-3458|423456784  |WestFie|
+
+-
+- SSN -> Name , City
+- Key (SSN,PhoneNumber)
+
+</small>
+
+``` 
+In other words
+SSN+ = { Name , City } is neither SSN nor all the attributes
+Neither X+ = X  nor X+= [All the attributes]
+So decompose.
+
+```
+
+---
+
+### BCNF Decmposition
+
+<img data-src="lib/bcnf-3.png">
+
+- Let Y = (X+) + X  and Z = [All Attributes] - (X+)
+- Y (Name,City,SSN)
+- Z (SSN , Phone Number)
+
+---
+
+### BCNF Decompostion
+Y
+
+|Name|SSN 	   	 |City 
+|----|-----------|----
+|Fred|123-34-3458|Seattle
+|Jose|223-34-3458|WestFie
+
+
+------
+Z
+
+|SSN|PHONENUMBER
+|---|-----------
+
+
+
+
+
+
+		
+
 
 
 
