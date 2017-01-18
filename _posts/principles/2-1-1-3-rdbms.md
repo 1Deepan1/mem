@@ -1,4 +1,4 @@
-##RDBMS [in progress]
+##RDBMS 
 ###References:
 - [DBMS by Sanjit jain](https://www.youtube.com/playlist?list=PLmXKhU9FNesR1rSES7oLdJaNFgmuj0SYV)
 - [DBMS by Jennifer widom](https://www.youtube.com/playlist?list=PLLH73N9cB21WYr92CFMaE1ygwqLiBWz4I)
@@ -365,11 +365,137 @@ For spacial control there is two alternatives
 
 ---
 
+### Serial Schedule
+
+<img src ="lib/pics/serialsched.png"/>
+
+---
+
 ### Serializable Schedule
 
 > A schedule is serializable if it is equivalent to serial schedule
 
-<img src ="lib/pics/serialsched.png"/>
+### Ignoring Details
+
+- Transaction is sequence of read and write
+		
+		T1 : R1(A);W1(A);R1(B);W1(B);
+		T2 : R2(A);W2(A);R2(B);W2(B);
+
+### Conflicts
+
+- Changing the order of interleaving, we can never change the order inside a transactions.That is called conflict
+- WR
+- RW
+- WW 
+
+---
+
+### Scheduler
+
+> Module that schedules transactions,ensuring serializability
+
+- Two main approaches
+	1. Pessimistic - locks
+	2. optimisitic - timestamps, version
+
+---
+
+### Pessimistic Scheduler
+
+- Each element has a unique lock
+- Each transaction must acquire the lock before reading/writing
+- If Lock is taken by another transaction  then wait
+- Transaction must release lock
+
+---
+
+### Notaion
+
+- L(A) transaction T acquires lock on element A
+- U(A) transaction T releases lock on element A 
+
+---
+
+###Non Serializable Schedule 
+<small>
+
+|T1			|T2			|
+|-----------|-----------|
+|Read(A,t)||
+|t:=t+100||
+| Write(A,t)||
+|||
+||Read(A,s)|
+||s:=s*2|
+||Write(A,s)|
+||Read(B,s)|
+||s:=s*2|
+||Write(B,s)|
+|||
+|Read(B,t)||
+|t:=t+100||
+|Write(B,t)||
+
+</small>
+
+---
+
+### LOCK on the previous example
+
+<img src="lib/pics/lock.png"/>
+
+- Lock doesn't enforce conflict serializability.
+
+---
+
+### Two Phase Locking
+
+-  In every transaction all lock request must precced all unlock requests.
+-  This ensures conflict serializability.
+
+---
+
+### Isolation levels
+
+- Read Uncommitted
+- Read Committed
+- Repeatable read
+- Serializable - ACID
+
+---
+
+### Read Uncommited
+- Write Locks , strict 2PL
+- no Read Locks , read only transactions are never delayed.
+
+---
+
+### Read Commmitted
+- Long duration write locks , strict 2pl
+- Short duration Read locks, acquire lock while reading.(Not 2PL)
+
+---
+
+### Repeatable Read 
+- Long duration write locks , strict 2PL
+- Long duration Read locks, strict 2PL
+
+---
+
+### Serializable 
+- Long duration write locks , strict 2PL
+- Long duration Read locks, strict 2PL
+- Deals with phantoms.
+
+---
+
+### Read-Only transactions
+
+- Promises system that this transaction is not going to acquire write locks.
+- it may increase performance.
+
+
 
 
 
