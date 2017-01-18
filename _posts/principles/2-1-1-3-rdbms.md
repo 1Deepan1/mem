@@ -238,6 +238,148 @@ R3(Name,Month)
 R4(Month,Discount)
 ```
 
+---
+
+### Storage and Index
+
+---
+
+### Mechanics of Disk
+<img src ="lib/pics/hd4.jpg"/>
+<small>
+1. Rotation speed 5400 rpm
+2. Number of plater(1-30)
+3. Number of tracks(<=10000)
+4. Number of byte/track (10^5)
+5. Unit of read or write - **Disk Block**
+6. Once in memory -  **Page**
+7. Typicall 4k / 8k / 16k
+
+</small>
+
+---
+
+### Disk Characteristics
+
+1. Disk Latency
+		Disks are slow  - because everything arround it is getting faster.
+		Equals - Seek time + rotational latency
+		Seek time - time required by the head to move to the cylinder
+		10ms - 40ms
+		Rotational time - Platters to turn / sectors to rotate.
+		10ms 
+2. Transfer time :40MB/s
+
+---
+
+### Storage Model
+
+1.  Spatial control for performance
+2. Temporal control for correctness and performance.
+
+For spacial control there is two alternatives
+- Use raw disk device interface directly
+- Use OS files
+
+---
+
+### Buffer Manager
+
+- If DBMS wants to read , it first checks the Buffer pool , if it is available then it returns the pointer
+- If not available in buffer , then it reads the disk
+
+---
+
+### Buffer Manager
+
+- Replacement policy
+- When buffer is full and if disk has to read a block, DBMS has to make some space in the pool, it is done by..
+	- LRU - Least Recently Used
+	- Clock Algorithim
+
+---
+
+### Arranging Pages on Disk
+
+- blocks on the same track , followed by
+- blocks on the same cylinder , followed by
+- blocks on the adjacent cylinder 
+
+---
+
+### NSM
+
+<img src="lib/pics/nsm.png"/>
+
+---
+
+### PAX
+
+<img src="lib/pics/pax.png"/>
+
+---
+
+### Index
+
+1. A file that allows fast access to records in the data file
+2. Contains (key , value ) pairs
+	- key k is attribute on which you are building the index , it doesn't have to be a primary key
+	- value K* is 
+		1. pointer to the record
+		2. or the record itself
+
+---
+
+### Index types
+
+1. Clustered 
+2. Un Clustered
+
+---
+
+### Clustered Index
+
+1. File is sorted on the index attribute
+2. Only one per table
+
+<img src ="lib/pics/clustered.png"/>
+
+---
+
+### Non Clustered Index
+
+<img src="lib/pics/unclustered.png"/>
+
+---
+
+### Hash Based Index
+
+<img src="lib/pics/hashindex.png"/>
+
+---
+
+### Schedule
+
+- Scheduler schedules transactions
+- Schedule is a sequence of interleaved actions from all transactions.
+
+---
+
+### Serializable Schedule
+
+> A schedule is serializable if it is equivalent to serial schedule
+
+<img src ="lib/pics/serialsched.png"/>
+
+
+
+
+
+
+
+
+
+
 
 
 

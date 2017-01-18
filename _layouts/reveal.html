@@ -39,13 +39,16 @@
 
                 {{ content }}
 
+                
             </div>
             <aside id="presentable-icon" class="revealjs">
     			<a title="Table of Contents" href="#?2">
         			<img alt="Table of Contents" src="lib/presentable/dist/icons/revealjs.png"/>
     			</a>
-		</aside>
-
+		   </aside>
+		   {% include disqus.html %}
+    			
+		 
 		</div>
 
 		<script src="{{ site.reveal_path }}lib/js/head.min.js"></script>
