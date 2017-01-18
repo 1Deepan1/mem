@@ -1,3 +1,3 @@
-##FEEDBACK & COMMENTS
+##Feedback & Comments
 
 {% include disqus.html %}
