@@ -1,5 +1,8 @@
 ## Design Patterns [in progress]
 
+- Design patterns , GOF
+- Peeling Design Patterns 
+
 ---
 
 ### Strategy Pattern
@@ -269,7 +272,30 @@ DispenseState:
 	
 	 	}
 
-----
+
+---
+
+
+### Abstract Factory
+
+> Creational Pattern, 
+Provide an interface for creating familes of related or dependent objects without specifying their concrete classes
+
+---
+
+### Class Diagram
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Abstract_factory_UML.svg"/>
+
+### 
+
+- As the intent says - provide an interface for creating object.
+- Some where I read , its a factory of factory , not sure what the authors intent , but I felt it is not correct.
+Problem 
+
+<img src="http://yuml.me/diagram/scruffy/class/%2F%2F Cool Class Diagram, [<<Shape>>]^-[Circle], [<<Shape>>]^-[Square], , [Client]-.->[Circle], [Client]-.->[<<Shape>>].jpg"/>
+
+
 
 
 
