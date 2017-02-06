@@ -4,6 +4,34 @@
 
 ---
 
+### Agile Manifesto
+
+[http://agilemanifesto.org/](http://agilemanifesto.org/)
+
+### Scrum Guide
+[http://www.scrumguides.org/scrum-guide.html#team-po](http://www.scrumguides.org/scrum-guide.html#team-po)
+
+
+---
+
+### Scrum Team
+
+* Product owner - not a project manager , which features to deliver next
+* Scrum Master - The coach
+* Development team - Usually a small team with clear goals.
+
+---
+
+### Sprint Planning
+
+* Sprint Planning is time-boxed to a maximum of eight hours for a one-month Sprint
+* What can be done in this Sprint
+* How will the choosen work get done
+* The Product Backlog items selected for this Sprint plus 
+  the plan for delivering them is called the Sprint Backlog.
+
+---
+
 ### User Stories
 
 - How many times , have you been given a job where you dont understand the reason you're doing it.
