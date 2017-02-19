@@ -2,7 +2,7 @@
  
  - Rowing boat race 
  - Why Scrum
- - Daily Scrum 
+ - Daily Standup 
  - Why this session
  - Working Document
 
@@ -20,7 +20,7 @@
 
 ### Why Scrum
 
-you’ll become more Agile,
+- You’ll become more Agile
 - Discovering how to react more quickly and respond more accurately to the inevitable change that comes your way.
 - And by staying focused, collaborating, and communicating, you can accomplish what truly needs to be done — successfully. 
 
