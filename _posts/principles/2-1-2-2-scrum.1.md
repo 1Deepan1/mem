@@ -38,17 +38,17 @@ you’ll become more Agile,
 
 ### Daily Scrum
  
- [How it should not be](https://www.youtube.com/watch?v=q_R9wQY4G5I&t=28s)
+[How it should not be](https://www.youtube.com/watch?v=q_R9wQY4G5I&t=28s)
 
 ---
- 
+
 ### Why this session
 
 ---
 
 ### Working Document
 
-TODO
+
 
 
 
