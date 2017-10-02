@@ -1,98 +1,73 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
 
-		<title>{{ site.title }}</title>
+	<title>{{ site.title }}</title>
 
-		<meta name="description" content="My Notes - I don't want to forget what I read">
-		<meta name="author" content="Deepan Kumar Manivannan">
+	<meta name="description" content="My Notes - I don't want to forget what I read">
+	<meta name="author" content="Deepan Kumar Manivannan">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="{{ site.reveal_path }}css/reveal.css">
-		<link rel="stylesheet" href="{{ site.reveal_theme_path }}{{ site.reveal_theme }}" id="theme">
+	<link rel="stylesheet" href="{{ site.reveal_path }}css/reveal.css">
+	<link rel="stylesheet" href="{{ site.reveal_theme_path }}{{ site.reveal_theme }}" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="{{ site.reveal_path }}lib/css/zenburn.css">
-		<link rel="stylesheet" href="lib/presentable/dist/presentable.min.css">
-		
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="{{ site.reveal_path }}lib/css/zenburn.css">
+	<link rel="stylesheet" href="lib/presentable/dist/presentable.min.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="{{ site.reveal_path }}css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+
+	<!-- Printing and PDF exports -->
+	<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
-		<!--[if lt IE 9]>
+	<!--[if lt IE 9]>
 		<script src="{{ site.reveal_path }}lib/js/html5shiv.js"></script>
 		<![endif]-->
-	</head>
+</head>
 
-	<body>
-		<div class="reveal">
+<body>
+	<div class="reveal">
 
-            <div class="slides">
+		<div class="slides">
 
-                {{ content }}
+			{{ content }}
 
-                
-            </div>
-            <aside id="presentable-icon" class="revealjs">
-    			<a title="Table of Contents" href="#?2">
+
+		</div>
+		<aside id="presentable-icon" class="revealjs">
+			<a title="Table of Contents" href="#?2">
         			<img alt="Table of Contents" src="lib/presentable/dist/icons/revealjs.png"/>
     			</a>
-		   </aside>
-    			
-		 
-		</div>
+		</aside>
 
-		<!-- <script src="{{ site.reveal_path }}lib/js/head.min.js"></script> -->
-		<script src="{{ site.reveal_path }}js/reveal.js"></script>
 
-		<script>
+	</div>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+	<script src="{{ site.reveal_path }}lib/js/head.min.js"></script>
+	<script src="{{ site.reveal_path }}js/reveal.js"></script>
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: '{{ site.reveal_transition }}', // default/cube/page/concave/zoom/linear/fade/none
+	<script>
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+	<script src="lib/presentable/dist/presentable.min.js"></script>
+</body>
 
-                {% if site.reveal_options %}
-
-                {{ site.reveal_options | append:',' }}
-
-                {% endif %}
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: '{{ site.reveal_path }}lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '{{ site.reveal_path }}plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '{{ site.reveal_path }}plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '{{ site.reveal_path }}plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '{{ site.reveal_path }}plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'lib/presentable/dist/presentable.min.js', callback: function() { presentable.toc({framework: "revealjs"}); } },
-                    {% if site.reveal_notes_server %}
-                    { src: '{{ site.reveal_path }}socket.io/socket.io.js', async: true },
-                    { src: '{{ site.reveal_path }}plugin/notes-server/client.js', async: true }
-                    {% else %}
-					{ src: '{{ site.reveal_path }}plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-                    {% endif %}
-                    {% if site.reveal_dependencies %}
-                    , {{ site.reveal_dependencies }}
-                    {% endif %}
-				]
-			});
-
-		</script>
-		<script src="lib/presentable/dist/presentable.min.js"></script>
-	</body>
 </html>
