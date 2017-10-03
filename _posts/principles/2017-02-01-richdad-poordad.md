@@ -51,25 +51,25 @@ Looking forward to have a team , which does it.
 
 ### Cash flow pattern of Poor
 
-<img data-src="lib/pics/poor.jpeg">
+<img data-src="lib/pics/poor.jpeg"  style="height:80vh">
 
 ---
 
 ### Cash flow pattern of Middle
 
-<img data-src="lib/pics/middle.jpeg">
+<img data-src="lib/pics/middle.jpeg" style="height:80vh">
 
 ---
 
 ### Cash flow pattern of Rich
 
-<img data-src="lib/pics/rich.jpeg">
+<img data-src="lib/pics/rich.jpeg"  style="height:80vh">
 
 ---
 
 ### Cash flow quadrant
 
-<img data-src="lib/pics/big.png">
+<img data-src="lib/pics/big.png"  style="height:80vh">
 
 ---
 
