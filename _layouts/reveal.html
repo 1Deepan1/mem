@@ -24,12 +24,18 @@
 
 	<!-- Printing and PDF exports -->
 	<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<script src="lib/presentable/dist/presentable.min.js"></script>
+	<script>
+		presentable.toc({
+			framework: "revealjs"
+		});
+	</script>
 
 	<!--[if lt IE 9]>
 		<script src="{{ site.reveal_path }}lib/js/html5shiv.js"></script>
@@ -47,8 +53,8 @@
 		</div>
 		<aside id="presentable-icon" class="revealjs">
 			<a title="Table of Contents" href="#?2">
-        			<img alt="Table of Contents" src="lib/presentable/dist/icons/revealjs.png"/>
-    			</a>
+				<img alt="Table of Contents" src="lib/presentable/dist/icons/revealjs.png" />
+			</a>
 		</aside>
 
 
@@ -58,16 +64,15 @@
 	<script src="{{ site.reveal_path }}js/reveal.js"></script>
 
 	<script>
-		Reveal.initialize({
-			dependencies: [
-				{ src: 'plugin/markdown/marked.js' },
-				{ src: 'plugin/markdown/markdown.js' },
-				{ src: 'plugin/notes/notes.js', async: true },
-				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
-			]
-		});
+			Reveal.initialize({
+				dependencies: [
+					{ src: '{{ site.reveal_path }}plugin/markdown/marked.js' },
+					{ src: '{{ site.reveal_path }}plugin/markdown/markdown.js' },
+					{ src: '{{ site.reveal_path }}plugin/notes/notes.js', async: true },
+					{ src: '{{ site.reveal_path }}plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+				]
+			});
 	</script>
-	<script src="lib/presentable/dist/presentable.min.js"></script>
 </body>
 
 </html>

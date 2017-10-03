@@ -27,3 +27,5 @@ markdown: redcarpet
 highlighter: rouge
 markdown_ext: ignoreme
 
+future: true
+

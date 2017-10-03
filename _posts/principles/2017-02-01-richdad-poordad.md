@@ -6,7 +6,7 @@
 1. Published in 1997
 2. 41 Million copies sold
 3. Objective of the author is to give the finacial education
-4. #1 personal finance book. Changed the way tens of millions of people around the world think about money.
+4. No 1 personal finance book. Changed the way tens of millions of people around the world think about money.
 5. His point of view is that the old advice of "get a good job, save money, get out of debt, invest for the long term, and diversify" is bad (both obsolete and flawed) advice
 6. It's about what his rich dad thought and poor dad thought him.
 7. Another book - Why A students work for C students.
@@ -71,11 +71,10 @@ Looking forward to have a team , which does it.
 
 <img data-src="lib/pics/big.png">
 
---- 
+---
 
+### Change your words , Change your life
 
-
-#### Change your words , Change your life
 #### Words are free!
 
 
