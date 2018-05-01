@@ -13,7 +13,7 @@ Feel free to use https://1deepan1.github.io/mem for sharing / learning .
 
 If anyone wants to remove the contents - which should'nt be in here - please write a mail to me.
 
-Feel free to contribute your learnings.
+Feel free to contribute.
 
 
 [Reveal.js]:      http://lab.hakim.se/reveal-js/#/
